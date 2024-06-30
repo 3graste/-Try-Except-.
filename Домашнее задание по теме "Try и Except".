@@ -1,0 +1,20 @@
+def add_everything_up(a, b):
+    try:
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            return a + b
+
+        if isinstance(a, str) and isinstance(b, str):
+            return a + b
+
+        else:
+            return f"{a} {b}"
+
+    except TypeError as e:
+        print(f"TypeError: {e}")
+        return None
+
+
+print(add_everything_up(146, 237))
+print(add_everything_up("яблоко", "груша"))
+print(add_everything_up(1421.437, "шляпа"))
+print(add_everything_up("привет", 226))
